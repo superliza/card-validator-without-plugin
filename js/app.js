@@ -18,27 +18,25 @@ function validCardCredentials(form) {
         if (numberArray.length === 16) {
             let reverseArray = numberArray.reverse();
             const hola = reverseArray.map((element, index) => {
-                let sum = 0;
+                let unmodifiedElements = parseInt(element);
+                if (index % 2 == 0) { 
+                    return unmodifiedElements;
+                }
                 if (index % 2 != 0) {
                     let multiplyElements = parseInt(element * 2);
                     // console.log(multiplyElements);
                     if (multiplyElements >= 10) {
                         multiplyElements = parseInt(multiplyElements / 10 + multiplyElements % 10);
-                    
-                    } else {
-                        // console.log("hola"); 
                     }
-                    sum = sum + multiplyElements;
-                    console.log(sum);
-                    
-                } else {
-                // console.log(sum += element);   
-                }
-                 
-                  
-            }) 
-            console.log(hola);
-            
+                    // console.log(multiplyElements);
+                    return multiplyElements
+                }    
+            }).reduce((a, b) => a + b, 0);
+            if (hola % 10 == 0) {
+                console.log("tarjeta válida");    
+            } else {
+                console.log("tarjeta inválida");    
+            } 
         } else {
             console.log("inválido");            
         }
