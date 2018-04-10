@@ -1,74 +1,29 @@
-# Valida datos de tarjetas de crédito
+# App que valida tarjetas de crédito
 
 * **Track:** _Common Core_
-* **Curso:** _JS Deep Dive: Crea tu propia librería usando JavaScript_
-* **Unidad:** _Producto final_
+* **Empresa:** _Laboratoria_
+* **Enlace:** [Enlace al proyecto](https://superliza.github.io/card-validator-without-plugin/)
 
 ---
 
-La función debe recibir un elemento DOM que contenga
-`<input>`s con los siguientes nombres (atributo `name`):
-
+Se recibe un elemento DOM que contiene los siguentes atributos:
 * `cn` (Card Number): El número de la tarjeta de crédito
 * `exp` (Expiry Date): Fecha de expiración
 * `cvv` (Card Verification Value): Código de validación de 3 dígitos
 * `name`: Nombre completo como aparece en la tarjeta
 
-## Ejemplo
+Una vez que se han recibido los atributos correspondientes se realiza una verifiación para saber si la tarjeta de crédito ingresada es válida.
 
-```html
-<form>
-  <div class="form-group">
-    <label for="cn">Número de tarjeta</label>
-    <input id="cn" name="cn" />
-  </div>
-  <div class="form-group">
-    <label for="exp">Fecha de vencimiento</label>
-    <input id="exp" name="exp" />
-  </div>
-  <div class="form-group">
-    <label for="cvv">CVV</label>
-    <input id="cvv" name="cvv" />
-  </div>
-  <div class="form-group">
-    <label for="name">Nombre completo</label>
-    <input id="name" name="name" />
-  </div>
-  <input type="submit" value="Pagar" />
-</form>
-```
+**Se utilizaron las siguientes tecnologías:**
 
-```js
-const form = document.querySelector("form");
+* `JavaScript`: Lenguaje de programación usado del lado del cliente.
+* `jQuery`: Biblioteca de JavaScript usada para manipular el árbol DOM.
+* `AJAX`: Técnica de desarrollo usada para crear una aplicación interactiva.
+* `CSS`: Lenguaje de diseño usado para definir la presentación de la página.
+* `HTML5`: Lenguaje de marcado usado para crear la estructura de la página.
 
-form.addEventListener("submit", e => {
-  e.preventDefault();
-  if (validateCardDetails(form)) {
-    console.log("datos válido... enviar...");
-  } else {
-    console.log("datos inválidos");
-  }
-});
+---
 
-function validateCardDetails(element) {
-  //escribe tu código aqui
-}
-```
+# Capturas:
 
-A la hora de hacer las validaciones, tu funcion debería de añadir la clase
-`.error` a los `<input>`s que no pasen la validación, o la clase `.success`
-en caso de que sí pase.
-
-Usar el algoritmo de Luhn, el cual únicamente usa los numeros de la tarjeta de crédito. **No** usa el código de verificacion, fecha de vencimiento , el nombre, ni la dirección.
-
-#### Cosas a considerar:
-
-1. Necesitas usar métodos de arreglo (.forEach, .map,etc.) sin embargo, estos metodos son para **arreglos**. Si yo hago:
-
-```javascript
-const form = document.querySelector("form");
-```
-
-¿Tengo un arreglo? ¿Algo diferente? ¿Cómo le hago para implementar metodos de arreglo en otras cosas que no son arreglos?
-
-2. La solucion se tiene que hacer **con ES6** con los temas vistos en clase.
+![Captura 1](assets/images/card-validator.png)
