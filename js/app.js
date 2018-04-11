@@ -88,27 +88,24 @@ const validCardName = form => {
     //     }
         
     // })
-    if (name.length >= 3 && name.length <= 30) {
+    if (name.length >= 3 && name.length <= 32) {
         const validateName = name.map(element => {
             if (element.charCodeAt() >= 97 && element.charCodeAt() <= 122 || element.charCodeAt() === 32) {
                 // console.log(element); 
                 return element  
             } else {
-                console.log(("no está dentro del rango"));
-            }
-            
+                divName.classList.add("has-error");
+                alert("POR FAVOR USA EL ALFABETO INGLÉS");
+            } 
         })
-        const ash = validateName.join("").split(" ");
-        if (ash.length >= 2) {
-            console.log(ash);
-            
+        const cardName = validateName.join("").split(" ");
+        if (cardName.length >= 2) {
+            divName.classList.add("has-success");
         } else {
-            console.log("escribe mínimo dos palabras");  
+            divName.classList.add("has-error"); 
         }
-        
     } else {
-        console.log("Escribe mínimo 2 caracteres");
-        
+        divName.classList.add("has-error");
     }   
 }
 

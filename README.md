@@ -1,7 +1,7 @@
 # App que valida tarjetas de crédito
 
 * **Track:** _Common Core_
-* **Empresa:** _Laboratoria_
+* **Empresa:** _Proyecto elaborado por alumna de [Laboratoria](http://www.laboratoria.la/)_
 * **Enlace:** [Enlace al proyecto](https://superliza.github.io/card-validator-without-plugin/)
 
 ---
