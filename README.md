@@ -1,4 +1,4 @@
-# App que valida tarjetas de crédito
+# Card validator
 
 * **Track:** _Common Core_
 * **Empresa:** _Proyecto elaborado por alumna de [Laboratoria](http://www.laboratoria.la/)_
