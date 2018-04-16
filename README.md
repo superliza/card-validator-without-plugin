@@ -22,6 +22,6 @@ Una vez que se han recibido los atributos correspondientes se realiza una verifi
 
 ---
 
-# Capturas:
+## Capturas:
 
 ![Captura 1](assets/images/card-validator.png)
